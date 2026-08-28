@@ -7,6 +7,8 @@ public class BirdMov : MonoBehaviour
     private Rigidbody2D rb;
     private float jumpForce = 5f;
 
+    private Animator anim;
+
     public TextMeshProUGUI scoreText;
 
     public GameObject gameOverUI;
@@ -20,6 +22,11 @@ public class BirdMov : MonoBehaviour
         initialPosition = transform.position;
         Time.timeScale = 1f;
         UpdateScoreDisplay();
+
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
 
         if (rb == null)
         {
@@ -41,6 +48,11 @@ public class BirdMov : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             rb.linearVelocity = Vector2.up * jumpForce;
+        }
+
+        if (anim != null)
+        {
+            anim.speed = (rb.linearVelocity.y > 0.1f) ? 1f : 0f;
         }
     }
 
