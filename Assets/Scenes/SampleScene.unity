@@ -415,9 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca7fe0ba9d31234b9d71b8dd6481b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
+  scoreText: {fileID: 505585808}
   gameOverUI: {fileID: 655672539}
---- !u!58 &493636251
-CircleCollider2D:
+--- !u!70 &493636251
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -451,7 +452,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.17
+  m_Size: {x: 0.34, y: 0.26}
+  m_Direction: 1
 --- !u!1 &505585806
 GameObject:
   m_ObjectHideFlags: 0
