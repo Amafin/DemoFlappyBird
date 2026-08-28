@@ -14,6 +14,8 @@
 - Option pour redémarrer (appuyer sur R en game over)
 - Afficher le score
 - Augmenter le score
+- Arrêter animation de l'oiseau quand ne bouge pas
 
 ## Étapes à faire :
-- Arrêter animation de l'oiseau quand ne bouge pas
+- Faire défiler les colonnes plus vite au fil du temps
+- Réduire l'espace entre les colonnes au fil du temps
