@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class BirdMov : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float jumpForce = 5f;
 
+    public TextMeshProUGUI scoreText;
+
     public GameObject gameOverUI;
+
+    private int score = 0;
     private bool isDead = false;
     private Vector3 initialPosition;
 
@@ -14,6 +19,7 @@ public class BirdMov : MonoBehaviour
     {
         initialPosition = transform.position;
         Time.timeScale = 1f;
+        UpdateScoreDisplay();
 
         if (rb == null)
         {
@@ -43,6 +49,23 @@ public class BirdMov : MonoBehaviour
         GameOver();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isDead && other.gameObject.name == "ScoreZone")
+        {
+            score++;
+            UpdateScoreDisplay();
+        }
+    }
+
+    private void UpdateScoreDisplay()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score : " + score.ToString();
+        }
+    }
+
     private void GameOver()
     {
         isDead = true;
@@ -67,6 +90,9 @@ public class BirdMov : MonoBehaviour
         transform.position = initialPosition;
         transform.rotation = Quaternion.identity;
         rb.linearVelocity = Vector2.zero;
+
+        score = 0;
+        UpdateScoreDisplay();
 
         if (gameOverUI != null)
         {
