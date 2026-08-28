@@ -5,14 +5,14 @@
 - Ajout sol et plafond
 - Ajout duo de colonnes
 - Déplacement des colonnes
+- Détruire les colonnes
+- Collisions sol et plafond
+- Collisions colonnes
 
 ## Étapes à faire :
 - Arrêter animation de l'oiseau quand ne bouge pas
 - Générer colonnes à intervalle régulier
 - Générer colonnes à différentes hauteurs (avec espace suffisant pour oiseau)
-- Détruire les colonnes
-- Collisions sol et plafond
-- Collisions colonnes
 - Afficher le score
 - Augmenter le score
 - Game over (tout arrêter)
