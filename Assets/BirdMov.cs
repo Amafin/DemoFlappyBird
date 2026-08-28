@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Movement : MonoBehaviour
+public class BirdMov : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float jumpForce = 5f;
@@ -22,4 +22,9 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision avec : " + collision.gameObject.name);
+    }
+    
 }
