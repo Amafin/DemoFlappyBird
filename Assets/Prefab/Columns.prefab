@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f05300e918c581f429695a2d849e5e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColMov
+  topPipe: {fileID: 8915124359920970907}
+  botPipe: {fileID: 1673717996367392072}
 --- !u!1 &3677253859002100596
 GameObject:
   m_ObjectHideFlags: 0
